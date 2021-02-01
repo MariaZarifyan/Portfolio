@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"/> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Maria Zarifyan Portfolio</title>
         <link href="pics/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -14,18 +14,20 @@
     <body>
         <header id="header">
             <nav id="nav-bar">
-                <a href="#" class="toggle-button">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </a>
+
+                    <a href="#" class="toggle-button">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </a>
+
 
                 <div class="nav-links">
                 <ul>
                     <li class="nav-item"><a href="#greetings">About me</a></li>
-                    <li class="nav-item"><a href="#options">Projects</a></li>
-                    <li class="nav-item"><a href="#footer">Contact me</a></li>
-                    
+                    <li class="nav-item"><a href="#skills">Skills</a></li>
+                    <li class="nav-item"><a href="#projects">My projects</a></li>
+                    <li class="nav-item"><a href="#contacts">Contact me</a></li>
                 </ul>
             </div>
             </nav>
@@ -42,7 +44,7 @@
                 <div class="pic-container">
                     <img class = "me-image" src="/styles/me.png" alt="me">
                 </div> 
-            
+                <p><a href="#description" class="intro-link">Click to learn more about me</a></p>
             </div>
         </section>
 
@@ -55,7 +57,14 @@
                 </div>
     
                 <div class="description-item resume">
-                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>
+                    <p> After obtaining my Bachelor's degree in Natural Language Processing, 
+                        I got into a Joint Master's program in Cognitive Linguistics at the University of Groningen (Netherlands).
+                    In parallel I also worked in several research projects as Data Analyst and wrote Python scripts to preprocess datasets,
+                however, after taking a class on how to develop the serious games, I decided to dive into web development
+                and switched from Python to JavaScript.
+
+                <p>While creating web-pages and apps, I always look for ways to apply my drawing and design skills. </p>
+            </p>
                 </div>
             </div>
  
@@ -136,39 +145,34 @@
                         <img src="styles/coffee.png" alt="">
                     </div>
                     <div class="proj-desc">
-                        <p>A fully-responsive landing page design for the online coffee store. Built with flex-container.</p>
+                        <p>A fully-responsive landing page design for the online coffee store.</p>
                         <p>#HTML, #CSS, #flex-container</p>
                     </div>
                 </div>
 
 
                 <div class="project">
-                    <div class="proj-name">Weather Worldwide</div>
+                    <div class="proj-name">Working-memory game</div>
                     <div class="screenshot">
-                        <img src="styles/weather.png" alt="">
+                        <img src="styles/simon.png" alt="">
                     </div>
                     <div class="proj-desc">
-                        <p>Check current weather at any place on Earth using three different scales</p>
-                        <p>#API, #Node.js</p>
+                        <p>Challenge your working memory with a popular Simon game!</p>
+                        <p>#jQuery</p>
                     </div>
                 </div>
-
-
-                <div class="project">
-                    <div class="proj-name">Timer</div>
-                    <div class="screenshot">
-                        <img src="styles/timer.png" alt="">
-                    </div>
-                    <div class="proj-desc">
-                        <p>Online timer with alarm sound. Allows to convert a time into HH:MM:SS format</p>
-                        <p>#HTML, #CSS, #JavaScript</p>
-                    </div>
-                </div>
-
-
-
-
             </div>
+        </section>
+
+        <section id="contacts">
+            <h3>Have some interesting ideas and want to work together? Feel free to contact me!</h3>
+            <div class="container-links">
+                <div class="link"><a href="mailto:masha.zarifyan@gmail.com"><i class="fas fa-envelope fa-2x"></i></a></div>
+                <div class="link"><a href="https://www.linkedin.com/in/maria-zarifyan/"><i class="fab fa-linkedin fa-2x"></i></a></div>
+                <div class="link"><a href="https://github.com/MariaZarifyan"><i class="fab fa-github fa-2x"></i></a></div>
+                <div class="link"><a href="https://www.instagram.com/m.zarifyan/"><i class="fab fa-instagram fa-2x"></i></a></div>
+            </div>
+            <p class="copyright">Developed and designed by @Maria Zarifyan</p>
         </section>
 
 

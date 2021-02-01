@@ -23,6 +23,10 @@ html, body {
     font-family: 'Montserrat', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: var(--dark-purple)
+}
 
 /*------------------------------------------------------NAVIGATION-------------------------------------------------------*/
 
@@ -35,7 +39,7 @@ nav {
 }
 
 .nav-links ul {
-  margin: 0;
+  margin-top: 22px;
   padding: 0;
   display: flex;
   
@@ -44,8 +48,6 @@ nav {
 
 .nav-links .nav-item {
   list-style-type: none;
-  font-family: 'Montserrat', sans-serif;
-  /* font-weight: bold; */
 }
 
 .nav-item a {
@@ -53,29 +55,24 @@ nav {
   text-decoration: none;
   padding: 1.5vw;
   display: block;
-  position: relative;
+  /* position: relative; */
   color: inherit;
   line-height: 24px;
+  border-bottom: 2px solid transparent;
 } 
 
-a:before, a:after {
-  content: '';
-  position: absolute;
-  transition: transform .5s ease;
+
+
+.nav-item a:hover {
+  border-bottom: 2px solid var(--medium-purple);
+  /* transition: border-bottom .5s ease; */
+  -webkit-transition:border-bottom .5s;
+    -moz-transition:border-bottom .5s;
+    -ms-transition:border-bottom .5s;
+     -o-transition:border-bottom .5s;
+        transition:border-bottom .5s;
 }
 
-a:before {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--medium-purple);
-  transform: scaleX(0);
-}
-
-a:hover:before {
-  transform: scaleX(1);
-}
 
 
 .toggle-button{
@@ -95,7 +92,28 @@ a:hover:before {
   height: 3px;
 }
 
-@media (max-width: 760px){
+@media (max-width: 768px){
+
+
+  #greetings h1 {
+    font-size: 2.8rem;
+    margin-top: 58px;
+  }
+
+  #greetings h2 {
+    font-size: 1.4rem;
+    
+  }
+
+
+  .nav-item a:hover {
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+  }
+
+
+  
+
   .toggle-button {
       display: flex;
   }
@@ -119,40 +137,45 @@ a:hover:before {
       text-align: center;
   }
 
-  .nav-links.active{
+  .nav-links.visible{
       display: flex;
   }
 
-  /* .about-me{
-    /* height: 80vh; */
-    /* width: 100%;
+
+  .description-wrapper{
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
   }
 
 
   .photo-container {
-    width: 360px;
+    margin-bottom: 30px;
   }
 
-  .me-image {
-    height: auto;
-    margin-top: 10px;
-  }  */
+
+  .portrait {
+    width: 100px; 
+    height: 100px;
+    margin: 20px auto 10px auto;
+    
+  }
+  .resume p {
+    text-align: center;
+  }
 }
 
 
-/* -----------------------------------------HELLO!--------------------------------------------*/
-/* 
-section {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  flex-direction: row;
-} */
 
+
+/* -----------------------------------------HELLO!--------------------------------------------*/
 
 .about-me {
   background-color: var(--cocoa);
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   width:100%;
   color: var(--dark-purple);
   margin: 0;
@@ -188,8 +211,8 @@ section {
 
 .pic-container {
   /* background-color: inherit; */
-  max-width: 400px;
-  margin: 40px auto 10px auto;
+  max-width: 350px;
+  margin: 40px auto 20px auto;
 }
 
 .me-image {
@@ -206,7 +229,8 @@ section {
 
 #description {
   background-color: var(--milk);
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   display: flex; 
   flex-direction: column;
   /* justify-content: center; */
@@ -220,16 +244,13 @@ section {
   font-size: 40px;
   text-align: center;
   color: var(--medium-purple);
-  /* position: relative; */
   margin-bottom:0;
 } 
 
 
 .description-wrapper{
-  /* width: 900px; */
   display:flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   justify-content: center;
   margin: 50px;
   
@@ -240,28 +261,29 @@ section {
 }
 
 .photo-container {
-  max-width: 640px;
-  flex: 0.8;
+  width: 600px;
+  flex: 50%;
 }
 
 
 .portrait {
   width: 300px; 
   height: 300px;
-  margin: 20px auto;
+  margin: 20px auto 10px auto;
   
 }
 
 .resume {
   /* padding: 100px 30px; */
   justify-content: center;
-  flex: 1.2;
+  flex: 50%;
   text-align: left;
   line-height: 2; }
 
 
 .resume p {
-  margin: 10px;
+  margin: 20px 30px;
+  color: var(--dark-purple)
 }
 
 /* -----------------------------------------SKILLS------------------------------------------*/
@@ -371,6 +393,8 @@ section {
   
 }
 
+.screenshot:hover {
+  transform: scale(1.05);}
 
 .screenshot img {
   width: auto;
@@ -382,4 +406,38 @@ section {
 
 .proj-desc, .proj-hashtags {
   padding: 0 10px 10px 10px
+}
+
+
+/* =============================================CONTACTS =========================================== */
+
+#contacts {
+  background-color: var(--medium-purple);
+  color: var(--milk);
+  height: auto;
+  display: flex; 
+  text-align: center;
+  flex-direction: column;
+  margin: 0;
+  padding:15px;
+}
+
+.container-links {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* margin: 10px; */
+}
+
+.link {
+  margin: 18px;
+}
+
+.link a {
+  color: var(--milk); 
+}
+
+.copyright {
+  font-size: 12px;
 }
