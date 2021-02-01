@@ -1,0 +1,385 @@
+:root {
+  --dark-purple:#75464a;
+  --medium-purple: #aa7c7a;
+  --grey-purple: #beaba7;
+  --cocoa: #e8dbd4;
+  --milk: #f3eeea;
+  --grey: #e8e8e9;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+  }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    /* height: 100%; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*------------------------------------------------------NAVIGATION-------------------------------------------------------*/
+
+nav { 
+  background-color: var(--cocoa);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-purple);
+}
+
+.nav-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+  
+}
+
+.nav-links .nav-item {
+  list-style-type: none;
+  font-family: 'Montserrat', sans-serif;
+  /* font-weight: bold; */
+}
+
+.nav-item a {
+  /* color: var(--medium-purple); */
+  text-decoration: none;
+  padding: 1.5vw;
+  display: block;
+  position: relative;
+  color: inherit;
+  line-height: 24px;
+} 
+
+a:before, a:after {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+
+a:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--medium-purple);
+  transform: scaleX(0);
+}
+
+a:hover:before {
+  transform: scaleX(1);
+}
+
+
+.toggle-button{
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  top: 1rem;
+  right: 1rem;
+}
+
+.toggle-button .bar {
+  background-color: var(--medium-purple);
+  width: 100%;
+  height: 3px;
+}
+
+@media (max-width: 760px){
+  .toggle-button {
+      display: flex;
+  }
+
+  .nav-links {
+      display: none;
+      width: 100%;
+  }
+
+  nav {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .nav-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .nav-links .nav-item {
+      text-align: center;
+  }
+
+  .nav-links.active{
+      display: flex;
+  }
+
+  /* .about-me{
+    /* height: 80vh; */
+    /* width: 100%;
+  }
+
+
+  .photo-container {
+    width: 360px;
+  }
+
+  .me-image {
+    height: auto;
+    margin-top: 10px;
+  }  */
+}
+
+
+/* -----------------------------------------HELLO!--------------------------------------------*/
+/* 
+section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: row;
+} */
+
+
+.about-me {
+  background-color: var(--cocoa);
+  height: 100vh;
+  width:100%;
+  color: var(--dark-purple);
+  margin: 0;
+  padding: 0; 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* justify-content: center; */
+  box-sizing: border-box;
+}
+
+
+/* .me-intro {
+  background-color: inherit;
+  padding-top: 0px;
+} */
+
+.me-intro h1 {
+  margin: 40px auto 10px auto;
+  color: var(--medium-purple);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  font-weight: normal;
+} 
+
+.me-intro h2 {
+  margin: 20px auto 20px auto;
+  color: var(--dark-purple);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+} 
+
+.pic-container {
+  /* background-color: inherit; */
+  max-width: 400px;
+  margin: 40px auto 10px auto;
+}
+
+.me-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  /* margin-bottom: 10px; */
+}
+
+
+
+/* -----------------------------My Description-------------------------- */
+
+
+#description {
+  background-color: var(--milk);
+  height: 100vh;
+  display: flex; 
+  flex-direction: column;
+  /* justify-content: center; */
+  margin: 0;
+  padding: 0;
+}
+
+#description h1 {
+  display: block;
+  padding: 10px;
+  font-size: 40px;
+  text-align: center;
+  color: var(--medium-purple);
+  /* position: relative; */
+  margin-bottom:0;
+} 
+
+
+.description-wrapper{
+  /* width: 900px; */
+  display:flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  margin: 50px;
+  
+}
+
+.description-item {
+  text-align: center;
+}
+
+.photo-container {
+  max-width: 640px;
+  flex: 0.8;
+}
+
+
+.portrait {
+  width: 300px; 
+  height: 300px;
+  margin: 20px auto;
+  
+}
+
+.resume {
+  /* padding: 100px 30px; */
+  justify-content: center;
+  flex: 1.2;
+  text-align: left;
+  line-height: 2; }
+
+
+.resume p {
+  margin: 10px;
+}
+
+/* -----------------------------------------SKILLS------------------------------------------*/
+
+#skills {
+  background-color: #faf9f7;
+  height: auto;
+  display: flex; 
+  flex-direction: column;
+  margin: 0;
+  padding:0;
+
+}
+
+#skills h1 {
+  display: block;
+  padding: 10px;
+  font-size: 40px;
+  text-align: center;
+  color: var(--medium-purple);
+  /* position: relative; */
+  margin-bottom:0;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px
+}
+
+.skill {
+  background-color: var(--grey);
+  margin: 50px 70px 20px 70px;
+  padding: 15px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+
+.logo {
+  margin: 55px 50px 20px 50px;
+  vertical-align: middle;
+}
+
+.logo, .skill-desc {
+  color: var(--medium-purple)
+}
+
+
+/* ---------------------------------------------PROJECTS-----=================-------- */
+
+#projects {
+  background-color: var(--cocoa);
+  height: auto;
+  display: flex; 
+  flex-direction: column;
+  margin: 0;
+  padding:0;
+}
+
+#projects h1 {
+  display: block;
+  padding: 10px;
+  font-size: 40px;
+  text-align: center;
+  color: var(--medium-purple);
+  /* position: relative; */
+  margin-bottom:0;
+}
+
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px
+}
+
+
+.project {
+
+  background-color: var(--grey);
+  margin: 50px 70px 20px 70px;
+  /* padding: 15px; */
+  width: 280px;
+  height: 380px;
+  text-align: center;
+  transition: 0.5s;
+  border-radius: 15px;
+}
+
+.proj-name {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #75464a;
+  font-weight: bold;
+}
+
+.screenshot {
+  height: 210px;
+  
+}
+
+
+.screenshot img {
+  width: auto;
+  border-radius: 15px;
+  height:100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.proj-desc, .proj-hashtags {
+  padding: 0 10px 10px 10px
+}
