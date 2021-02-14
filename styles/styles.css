@@ -1,5 +1,5 @@
 :root {
-  --dark-purple:#75464a;
+  --dark-purple: #75464a;
   --medium-purple: #aa7c7a;
   --grey-purple: #beaba7;
   --cocoa: #e8dbd4;
@@ -7,32 +7,36 @@
   --grey: #e8e8e9;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
-
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
-html, body {
-    margin: 0;
-    padding: 0;
-    /* height: 100%; */
-    font-family: 'Montserrat', sans-serif;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* height: 100%; */
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: var(--dark-purple)
+  color: var(--dark-purple);
+}
+
+.hideme {
+  opacity: 0;
 }
 
 /*------------------------------------------------------NAVIGATION-------------------------------------------------------*/
 
-nav { 
+nav {
   background-color: var(--cocoa);
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   color: var(--dark-purple);
@@ -42,8 +46,6 @@ nav {
   margin-top: 22px;
   padding: 0;
   display: flex;
-  
-  
 }
 
 .nav-links .nav-item {
@@ -59,23 +61,19 @@ nav {
   color: inherit;
   line-height: 24px;
   border-bottom: 2px solid transparent;
-} 
-
-
+}
 
 .nav-item a:hover {
   border-bottom: 2px solid var(--medium-purple);
   /* transition: border-bottom .5s ease; */
-  -webkit-transition:border-bottom .5s;
-    -moz-transition:border-bottom .5s;
-    -ms-transition:border-bottom .5s;
-     -o-transition:border-bottom .5s;
-        transition:border-bottom .5s;
+  -webkit-transition: border-bottom 0.5s;
+  -moz-transition: border-bottom 0.5s;
+  -ms-transition: border-bottom 0.5s;
+  -o-transition: border-bottom 0.5s;
+  transition: border-bottom 0.5s;
 }
 
-
-
-.toggle-button{
+.toggle-button {
   position: absolute;
   display: none;
   flex-direction: column;
@@ -92,9 +90,7 @@ nav {
   height: 3px;
 }
 
-@media (max-width: 768px){
-
-
+@media (max-width: 768px) {
   #greetings h1 {
     font-size: 2.8rem;
     margin-top: 58px;
@@ -102,47 +98,41 @@ nav {
 
   #greetings h2 {
     font-size: 1.4rem;
-    
   }
-
 
   .nav-item a:hover {
     font-weight: bold;
     border-bottom: 2px solid transparent;
   }
 
-
-  
-
   .toggle-button {
-      display: flex;
+    display: flex;
   }
 
   .nav-links {
-      display: none;
-      width: 100%;
+    display: none;
+    width: 100%;
   }
 
   nav {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .nav-links ul {
-      width: 100%;
-      flex-direction: column;
+    width: 100%;
+    flex-direction: column;
   }
 
   .nav-links .nav-item {
-      text-align: center;
+    text-align: center;
   }
 
-  .nav-links.visible{
-      display: flex;
+  .nav-links.visible {
+    display: flex;
   }
 
-
-  .description-wrapper{
+  .description-wrapper {
     display: flex;
     /* flex-direction: column; */
     flex-wrap: wrap;
@@ -150,25 +140,19 @@ nav {
     text-align: center;
   }
 
-
   .photo-container {
     margin-bottom: 30px;
   }
 
-
   .portrait {
-    width: 100px; 
+    width: 100px;
     height: 100px;
     margin: 20px auto 10px auto;
-    
   }
   .resume p {
     text-align: center;
   }
 }
-
-
-
 
 /* -----------------------------------------HELLO!--------------------------------------------*/
 
@@ -176,10 +160,10 @@ nav {
   background-color: var(--cocoa);
   height: auto;
   /* min-height: 100vh; */
-  width:100%;
+  width: 100%;
   color: var(--dark-purple);
   margin: 0;
-  padding: 0; 
+  padding: 0;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -187,27 +171,50 @@ nav {
   box-sizing: border-box;
 }
 
+.loaded .me-intro h1,
+.me-image {
+  animation: fadeIn 3s ease-in;
+}
 
-/* .me-intro {
-  background-color: inherit;
-  padding-top: 0px;
-} */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.loaded .me-intro h2,
+.loaded .nav-item {
+  animation: slideIn 4s;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-300px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 .me-intro h1 {
   margin: 16px auto 8px auto;
   color: var(--medium-purple);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 3.8rem;
   font-weight: normal;
-} 
+}
 
 .me-intro h2 {
   margin: 14px auto 10px auto;
   color: var(--dark-purple);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
   font-weight: normal;
-} 
+}
 
 .pic-container {
   /* background-color: inherit; */
@@ -222,16 +229,13 @@ nav {
   /* margin-bottom: 10px; */
 }
 
-
-
 /* -----------------------------My Description-------------------------- */
-
 
 #description {
   background-color: var(--milk);
   height: auto;
   min-height: 100vh;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   /* justify-content: center; */
   margin: 0;
@@ -244,16 +248,14 @@ nav {
   font-size: 40px;
   text-align: center;
   color: var(--medium-purple);
-  margin-bottom:0;
-} 
+  margin-bottom: 0;
+}
 
-
-.description-wrapper{
-  display:flex;
+.description-wrapper {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 50px;
-  
 }
 
 .description-item {
@@ -265,12 +267,10 @@ nav {
   flex: 50%;
 }
 
-
 .portrait {
-  width: 300px; 
+  width: 300px;
   height: 300px;
   margin: 20px auto 10px auto;
-  
 }
 
 .resume {
@@ -278,12 +278,12 @@ nav {
   justify-content: center;
   flex: 50%;
   text-align: left;
-  line-height: 2; }
-
+  line-height: 2;
+}
 
 .resume p {
   margin: 20px 30px;
-  color: var(--dark-purple)
+  color: var(--dark-purple);
 }
 
 /* -----------------------------------------SKILLS------------------------------------------*/
@@ -291,11 +291,10 @@ nav {
 #skills {
   background-color: #faf9f7;
   height: auto;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   margin: 0;
-  padding:0;
-
+  padding: 0;
 }
 
 #skills h1 {
@@ -305,7 +304,7 @@ nav {
   text-align: center;
   color: var(--medium-purple);
   /* position: relative; */
-  margin-bottom:0;
+  margin-bottom: 0;
 }
 
 .skills-container {
@@ -313,7 +312,7 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .skill {
@@ -332,20 +331,20 @@ nav {
   vertical-align: middle;
 }
 
-.logo, .skill-desc {
-  color: var(--medium-purple)
+.logo,
+.skill-desc {
+  color: var(--medium-purple);
 }
-
 
 /* ---------------------------------------------PROJECTS-----=================-------- */
 
 #projects {
   background-color: var(--cocoa);
   height: auto;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   margin: 0;
-  padding:0;
+  padding: 0;
 }
 
 #projects h1 {
@@ -355,21 +354,18 @@ nav {
   text-align: center;
   color: var(--medium-purple);
   /* position: relative; */
-  margin-bottom:0;
+  margin-bottom: 0;
 }
-
 
 .projects-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
-
 .project {
-
   background-color: var(--grey);
   margin: 50px 70px 20px 70px;
   /* padding: 15px; */
@@ -390,24 +386,24 @@ nav {
 
 .screenshot {
   height: 210px;
-  
 }
 
 .screenshot:hover {
-  transform: scale(1.05);}
+  transform: scale(1.05);
+}
 
 .screenshot img {
   width: auto;
   border-radius: 15px;
-  height:100%;
+  height: 100%;
   overflow: hidden;
   object-fit: cover;
 }
 
-.proj-desc, .proj-hashtags {
-  padding: 0 10px 10px 10px
+.proj-desc,
+.proj-hashtags {
+  padding: 0 10px 10px 10px;
 }
-
 
 /* =============================================CONTACTS =========================================== */
 
@@ -415,15 +411,15 @@ nav {
   background-color: var(--medium-purple);
   color: var(--milk);
   height: auto;
-  display: flex; 
+  display: flex;
   text-align: center;
   flex-direction: column;
   margin: 0;
-  padding:15px;
+  padding: 15px;
 }
 
 .container-links {
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -435,7 +431,7 @@ nav {
 }
 
 .link a {
-  color: var(--milk); 
+  color: var(--milk);
 }
 
 .link a i {
@@ -444,8 +440,8 @@ nav {
 
 .link a i:hover {
   cursor: default;
-    transform: rotate(360deg);
-    transition: all 0.8s ease-in-out 0s;
+  transform: rotate(360deg);
+  transition: all 0.8s ease-in-out 0s;
 }
 
 .copyright {

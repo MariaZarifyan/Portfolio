@@ -37,18 +37,18 @@
             <div class="about-me">
                 <div class="me-intro">
                     
-                    <h1>Hello! I'm Maria</h1>
-                    <h2>a web developer</h2>
+                    <h1 class="fade-onload">Hello! I'm Maria</h1>
+                    <h2 class="fade-onload">a web developer</h2>
                 </div>
                  
                 <div class="pic-container">
-                    <img class = "me-image" src="styles/me-circle.png" alt="me">
+                    <img class = "me-image fade-onload" src="styles/me-circle.png" alt="me">
                 </div> 
                 <p><a href="#description" class="intro-link">Click to learn more about me</a></p>
             </div>
         </section>
 
-        <section id="description">
+        <section id="description" class="hideme">
             <h1>About me</h1>
 
             <div class="description-wrapper">
@@ -69,7 +69,7 @@
  
         </section>
 
-        <section id="skills">
+        <section id="skills" class="hideme">
             <h1>My skills</h1>
             <div class="skills-container">
                 <div class="skill">
@@ -107,7 +107,7 @@
             </div>
         </section>
 
-        <section id="projects"> 
+        <section id="projects" class="hideme"> 
             <h1>My projects</h1>
             <div class="projects-container">
                 <div class="project">
@@ -173,7 +173,7 @@
             </div>
         </section>
 
-        <section id="contacts">
+        <section id="contacts" class="hideme">
             <h3>Have some interesting ideas and want to work together? Feel free to contact me!</h3>
             <div class="container-links">
                 <div class="link"><a href="mailto:masha.zarifyan@gmail.com" target="_blank"><i class="fas fa-envelope fa-2x"></i></a></div>
@@ -183,8 +183,8 @@
             </div>
             <p class="copyright">Developed and designed by @Maria Zarifyan</p>
         </section>
-
-
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js">
+        </script>
         <script src="app.js" async defer></script>
     </body>
 </html>
