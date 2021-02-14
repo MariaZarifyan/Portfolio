@@ -439,7 +439,7 @@ nav {
 }
 
 .link a i:hover {
-  cursor: default;
+  cursor: pointer;
   transform: rotate(360deg);
   transition: all 0.8s ease-in-out 0s;
 }
